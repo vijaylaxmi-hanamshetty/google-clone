@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 10px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header .logo {
+      font-size: 36px;
+      color: #4285f4;
+      font-weight: bold;
+    }
+
+    header h1 {
+      font-size: 20px;
+      color: #d93025;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .number-range {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .number-range input {
+      flex: 1;
+    }
+
+    .search-btn {
+
+      padding: 10px;
+      background-color: #4285f4;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+
+    }
+
+    .search-btn:hover {
+      background-color: #357ae8;
+      padding: 10px;
+      background-color: #4285f4;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+
+
+    @media (max-width: 600px) {
+      body {
+        margin: 10px;
+      }
+
+      header .logo {
+        font-size: 28px;
+      }
+
+      header h1 {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      .number-range {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">Google</div>
+      <h1>Advanced Search</h1>
+    </header>
+    <nav aria-label="Page navigation example"
+      style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; border-radius: 4px; background-color: #fff; display: inline-block;">
+      <ul class="pagination"
+        style="display: flex; justify-content: center; list-style-type: none; padding: 0; margin: 0;">
+        <li class="page-item" style="margin: 0 5px; background-color: #f0f0f0; border-radius: 4px; padding: 5px 10px;">
+          <a class="page-link" href="./Index.html" style="text-decoration: none; color: #4285f4;">1</a>
+        </li>
+        <li class="page-item" style="margin: 0 5px; background-color: #f0f0f0; border-radius: 4px; padding: 5px 10px;">
+          <a class="page-link" href="./About.html" style="text-decoration: none; color: #4285f4;">2</a>
+        </li>
+        <li class="page-item" style="margin: 0 5px; background-color: #f0f0f0; border-radius: 4px; padding: 5px 10px;">
+          <a class="page-link" href="./Advance.html" style="text-decoration: none; color: #4285f4;">3</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <section>
+      <h2>Find pages with...</h2>
+      <form>
+        <label>
+          All these words:
+          <input type="text" placeholder="Enter words">
+        </label>
+        <label>
+          Exact word or phrase:
+          <input type="text" placeholder="Enter phrase">
+        </label>
+        <label>
+          Any of these words:
+          <input type="text" placeholder="Enter words">
+        </label>
+        <label>
+          None of these words:
+          <input type="text" placeholder="Enter words">
+        </label>
+        <label>
+          Numbers ranging from:
+          <div class="number-range">
+            <input type="number" placeholder="From">
+            <input type="number" placeholder="To">
+          </div>
+        </label>
+      </form>
+    </section>
+
+    <section>
+      <h2>Narrow your results by...</h2>
+      <form>
+        <label>
+          Language:
+          <select>
+            <option>Any language</option>
+            <option>English</option>
+            <option>Spanish</option>
+          </select>
+        </label>
+        <label>
+          Region:
+          <select>
+            <option>Any region</option>
+            <option>United States</option>
+            <option>Europe</option>
+          </select>
+        </label>
+        <label>
+          Last update:
+          <select>
+            <option>Anytime</option>
+            <option>Past 24 hours</option>
+            <option>Past week</option>
+          </select>
+        </label>
+        <label>
+          Site or domain:
+          <input type="text" placeholder="e.g., wikipedia.org">
+        </label>
+        <label>
+          File type:
+          <select>
+            <option>Any format</option>
+            <option>PDF</option>
+            <option>DOC</option>
+          </select>
+        </label>
+      </form>
+      <div class=" container">
+        <button class="search-btn"> Advance Search</button>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+
+</html>
