@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: black;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .logo-link {
+            font-weight: lighter;
+            color: black;
+            text-decoration: none;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+
+        .google-logo img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .search-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 500px;
+            height: 40px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #dcdfe1;
+            border-radius: 24px;
+            margin-right: 10px;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: #4285f4;
+        }
+
+        .search-button {
+            height: 42px;
+            padding: 0 20px;
+            background-color: #4285f4;
+            color: white;
+            font-size: 14px;
+            border: none;
+            border-radius: 24px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .search-button:hover {
+            background-color: #357ae8;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .google-logo img {
+                width: 80%;
+            }
+
+            .search-input {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .search-button {
+                width: auto;
+            }
+
+            .logo-link {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .google-logo img {
+                width: 70%;
+            }
+
+            .search-input {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .search-button {
+                width: auto;
+            }
+
+            .logo-link {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="link">
+        <a href="index.html" class="logo-link">Back to Google</a>
+    </div>
+
+    <div class="search-container">
+        <div class="google-logo">
+            <img src="google.png.png" alt="Google Logo">
+        </div>
+        
+        <form action="https://www.google.com/search" method="get" class="search-form">
+            <input type="hidden" name="tbm" value="isch">
+            <input type="text" name="q" placeholder="Search Images" class="search-input" required>
+            <input type="submit" value="Search Images" class="search-button">
+        </form>
+    </div>
+</body>
+
+</html>

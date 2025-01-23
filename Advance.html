@@ -1,221 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced Search</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 10px;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    header .logo {
-      font-size: 36px;
-      color: #4285f4;
-      font-weight: bold;
-    }
-
-    header h1 {
-      font-size: 20px;
-      color: #d93025;
-    }
-
-    section {
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    input,
-    select {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    .number-range {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .number-range input {
-      flex: 1;
-    }
-
-    .search-btn {
-
-      padding: 10px;
-      background-color: #4285f4;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-
-    }
-
-    .search-btn:hover {
-      background-color: #357ae8;
-      padding: 10px;
-      background-color: #4285f4;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-
-
-    @media (max-width: 600px) {
-      body {
-        margin: 10px;
-      }
-
-      header .logo {
-        font-size: 28px;
-      }
-
-      header h1 {
-        font-size: 18px;
-      }
-
-      h2 {
-        font-size: 16px;
-      }
-
-      .number-range {
-        flex-direction: column;
-      }
-    }
-  </style>
+        .link a {
+            text-decoration: none;
+            color: black;
+            font-size: medium;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">Google</div>
-      <h1>Advanced Search</h1>
-    </header>
-    <nav aria-label="Page navigation example"
-      style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; border-radius: 4px; background-color: #fff; display: inline-block;">
-      <ul class="pagination"
-        style="display: flex; justify-content: center; list-style-type: none; padding: 0; margin: 0;">
-        <li class="page-item" style="margin: 0 5px; background-color: #f0f0f0; border-radius: 4px; padding: 5px 10px;">
-          <a class="page-link" href="./Index.html" style="text-decoration: none; color: #4285f4;">1</a>
-        </li>
-        <li class="page-item" style="margin: 0 5px; background-color: #f0f0f0; border-radius: 4px; padding: 5px 10px;">
-          <a class="page-link" href="./About.html" style="text-decoration: none; color: #4285f4;">2</a>
-        </li>
-        <li class="page-item" style="margin: 0 5px; background-color: #f0f0f0; border-radius: 4px; padding: 5px 10px;">
-          <a class="page-link" href="./Advance.html" style="text-decoration: none; color: #4285f4;">3</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="link">
+        <a href="index.html" class="logo-link">Google Search</a>
+       
+    </div>
 
 
-    <section>
-      <h2>Find pages with...</h2>
-      <form>
-        <label>
-          All these words:
-          <input type="text" placeholder="Enter words">
-        </label>
-        <label>
-          Exact word or phrase:
-          <input type="text" placeholder="Enter phrase">
-        </label>
-        <label>
-          Any of these words:
-          <input type="text" placeholder="Enter words">
-        </label>
-        <label>
-          None of these words:
-          <input type="text" placeholder="Enter words">
-        </label>
-        <label>
-          Numbers ranging from:
-          <div class="number-range">
-            <input type="number" placeholder="From">
-            <input type="number" placeholder="To">
-          </div>
-        </label>
-      </form>
-    </section>
+    <div class="container mt-5">
+        <h2 class="mb-4">Advanced Search</h2>
+        <form action="https://www.google.com/search">
+            <div class="mb-3">
+                <label for="allWords" class="form-label">Find pages with...</label>
+                <input type="text" class="form-control" id="allWords" placeholder="all these words" name="as_q">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="this exact word or phrase" name="as_epq">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="any of these words" name="as_oq">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="none of these words" name="as_eq">
+            </div>
+            <div class="mb-3">
+                <label for="range" class="form-label">Numbers ranging from:</label>
+                <div class="d-flex gap-2">
+                    <input type="number" class="form-control" placeholder="From" name="as_nol">
+                    <input type="number" class="form-control" placeholder="To" name="as_nhi">
+                </div>
+            </div>
+            <hr>
+            <h5>Then narrow your results by...</h5>
+            <div class="mb-3">
+                <label for="language" class="form-label">Language:</label>
+                <select id="language" class="form-select">
+                    <option>any language</option>
+                    <option>English</option>
+                    <option>French</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="region" class="form-label">Region:</label>
+                <select id="region" class="form-select">
+                    <option>any region</option>
+                    <option>United States</option>
+                    <option>India</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="update" class="form-label">Last Update:</label>
+                <select id="update" class="form-select">
+                    <option>anytime</option>
+                    <option>past 24 hours</option>
+                    <option>past week</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="site" class="form-label">Site or Domain:</label>
+                <input type="text" class="form-control" id="site" placeholder="example.com">
+            </div>
+            <div class="mb-3">
+                <label for="terms" class="form-label">Terms appearing:</label>
+                <select id="terms" class="form-select" name="as_qdr">
+                    <option>anywhere in the page</option>
+                    <option>in the title</option>
+                    <option>in the text</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="safeSearch" class="form-label">SafeSearch:</label>
+                <select id="safeSearch" class="form-select" name="as_sitesearch">
+                    <option>show most relevant results</option>
+                    <option>filter explicit content</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="fileType" class="form-label">File type:</label>
+                <select id="fileType" class="form-select" name="as_occt">
+                    <option>any format</option>
+                    <option>PDF</option>
+                    <option>DOC</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="usageRights" class="form-label">Usage Rights:</label>
+                <select id="usageRights" class="form-select" name="as_filetype">
+                    <option>not filtered by license</option>
+                    <option>free to use or share</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary"  name="tbs">Advanced Search</button>
+        </form>
+    </div>
 
-    <section>
-      <h2>Narrow your results by...</h2>
-      <form>
-        <label>
-          Language:
-          <select>
-            <option>Any language</option>
-            <option>English</option>
-            <option>Spanish</option>
-          </select>
-        </label>
-        <label>
-          Region:
-          <select>
-            <option>Any region</option>
-            <option>United States</option>
-            <option>Europe</option>
-          </select>
-        </label>
-        <label>
-          Last update:
-          <select>
-            <option>Anytime</option>
-            <option>Past 24 hours</option>
-            <option>Past week</option>
-          </select>
-        </label>
-        <label>
-          Site or domain:
-          <input type="text" placeholder="e.g., wikipedia.org">
-        </label>
-        <label>
-          File type:
-          <select>
-            <option>Any format</option>
-            <option>PDF</option>
-            <option>DOC</option>
-          </select>
-        </label>
-      </form>
-      <div class=" container">
-        <button class="search-btn"> Advance Search</button>
-      </div>
-    </section>
-
-  </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
